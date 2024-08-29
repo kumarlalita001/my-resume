@@ -46,17 +46,20 @@
 
 // src/AboutSection.js
 import React, { useState } from "react";
+import { GiHamburgerMenu } from "react-icons/gi";
 import { Typewriter } from "react-simple-typewriter";
 
-const About = () => {
+const About = ({ updateState }) => {
   const [isCursorBlink, setIsCursorBlink] = useState(false);
 
   const handleLoopDone = () => {
     setIsCursorBlink(isCursorBlink);
   };
+
   return (
-    <section className="bg-inherit text-white p-5 ">
-      <h2 className="text-4xl    font-bold mb-8 text-shadow-xl">ABOUT</h2>
+    <section className="bg-inherit text-white p-5 " id="about">
+      <div className="text-4xl    font-bold mb-8 text-shadow-xl ">ABOUT</div>
+
       <div className="container mx-auto ">
         {/* <div className="flex flex-col md:flex-row items-center"> */}
         {/* <div className="md:w-1/2 mb-8 md:mb-0">

@@ -3,7 +3,7 @@ import React from "react";
 
 const EducationTimeline = () => {
   return (
-    <div className="bg-teal-500 p-5 ">
+    <div className="bg-teal-500 p-5 " id="education">
       <h2 className="text-4xl text-white font-bold mb-8 text-shadow-2xl">
         EDUCATION
       </h2>

@@ -1,18 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import { Education, LeftNavBar, WorkExperience } from "./components";
 import About from "./components/About/About";
 
 const App = () => {
+  const [isNavBarOpen, setIsNavBarOpen] = useState(true);
+  console.log(setIsNavBarOpen);
+
   return (
     <div className="w-full h-full flex justify-end">
       {/* <div className="bg-blue-950 h-[10%]">
 
       </div> */}
-      <LeftNavBar />
-      <div className="w-3/5 md:w-2/3 lg:w-3/4 bg-teal-500">
-        <About />
+      <LeftNavBar isNavBarOpen={isNavBarOpen} updateState={setIsNavBarOpen} />
+      <div className="w-5/5 md:w-2/3 lg:w-3/4 bg-teal-500">
+        <About updateState={setIsNavBarOpen} />
         <Education />
-
         <WorkExperience />
       </div>
     </div>
