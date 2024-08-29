@@ -1,4 +1,3 @@
-// src/LeftNavbar.js
 import React from "react";
 import { BsMenuButtonWideFill } from "react-icons/bs";
 import {
@@ -44,11 +43,6 @@ const LeftNavbar = ({ isNavBarOpen, updateState }) => {
       element.scrollIntoView({ behavior: "smooth" });
     }
   };
-  // if (isNavBarOpen) {
-  //   return <div className="p-5 rounded-full ">🎛️</div>;
-  // }
-
-  console.log(isNavBarOpen, updateState);
 
   return (
     <div
@@ -98,6 +92,7 @@ const LeftNavbar = ({ isNavBarOpen, updateState }) => {
           data.map((item) => {
             return (
               <div
+                key={item.id}
                 onClick={() => {
                   updateState(false);
                   scrollToSection(item.to);
@@ -137,19 +132,35 @@ const LeftNavbar = ({ isNavBarOpen, updateState }) => {
       </nav>
 
       <div className=" flex flex-col  w-full md:flex-row items-center gap-5 md:gap-3  mb-5 mt-4 ">
-        <button className="px-4 w-full py-1  bg-teal-500 rounded-md hover:bg-teal-600 transition duration-300">
+        <a
+          href="https://wa.me/+917735381142?text=Congrats!!! Lalita Kumar Mohanty You are Hired."
+          target="_blank"
+          className="px-4 w-full py-1  bg-teal-500 rounded-md hover:bg-teal-600 transition duration-300"
+        >
           HIRE ME
-        </button>
-        <button className="px-4 w-full  py-1  bg-teal-500 rounded-md hover:bg-teal-600 transition duration-300">
+        </a>
+        <a
+          href="resume.pdf"
+          target="_blank"
+          className="px-4 w-full  py-1  bg-teal-500 rounded-md hover:bg-teal-600 transition duration-300"
+        >
           GET MY CV
-        </button>
+        </a>
       </div>
 
       <div className=" flex justify-evenly w-full pb-16   ">
-        <a href="https://www.linkedin.com" target="_blank" rel="noreferrer">
+        <a
+          href="https://www.linkedin.com/in/kumarlalita001/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaLinkedin className="text-2xl hover:text-teal-500  transition duration-300" />
         </a>
-        <a href="https://github.com" target="_blank" rel="noreferrer">
+        <a
+          href="https://github.com/kumarlalita001/"
+          target="_blank"
+          rel="noreferrer"
+        >
           <FaGithub className="text-2xl hover:text-teal-500 transition duration-300" />
         </a>
         <a href="https://www.facebook.com" target="_blank" rel="noreferrer">
